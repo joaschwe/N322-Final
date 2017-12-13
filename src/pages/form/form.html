@@ -1,0 +1,94 @@
+<!--
+  Generated template for the FormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title padding-left="20px;">Add Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--<ion-list>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label color="primary" stacked>Item</ion-label>-->
+      <!--<ion-input type="text" placeholder="Name of item" name="itemName"></ion-input>-->
+    <!--</ion-item>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label color="primary" stacked>Description</ion-label>-->
+      <!--<ion-input type="text" placeholder="Description and store it can be purchased at" name="itemDescription"></ion-input>-->
+    <!--</ion-item>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label color="primary" stacked>Item Image</ion-label>-->
+      <!--<ion-input type="url" placeholder="URL for picture of item" name="itemImg"></ion-input>-->
+    <!--</ion-item>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label color="primary" stacked>Item Image</ion-label>-->
+      <!--<ion-input type="url" placeholder="Another Img for something?" name="avatarImg"></ion-input>-->
+    <!--</ion-item>-->
+
+  <!--</ion-list>-->
+
+
+  <!--<ion-buttons end>-->
+    <!--&lt;!&ndash;<button ion-button icon-only (click)="addListing()">&ndash;&gt;-->
+    <!--<button ion-button icon-only (click)="addListing()">-->
+      <!--<ion-icon name="submit"></ion-icon>-->
+    <!--</button>-->
+  <!--</ion-buttons>-->
+
+
+
+
+
+  <!---------------  NOT WORKING --------------->
+
+
+  <form (ngSubmit)="addListing()">
+    <ion-item>
+      <ion-label color="dark" style="font-size: 18px; margin: 20px 0;" stacked>Item Name</ion-label>
+      <ion-input type="text" [(ngModel)]="itemName" name="itemName" placeholder="Name of item"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark" stacked style="font-size: 18px; margin: 20px 0;">Item Description</ion-label>
+      <ion-input type="text" [(ngModel)]="itemDescription" name="itemDescription" placeholder="Description and store it can be purchased at"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark" stacked style="font-size: 18px; margin: 20px 0;">Item Image</ion-label>
+      <ion-input type="url" [(ngModel)]="itemImg" name="itemImg" placeholder="URL for picture of item"></ion-input>
+    </ion-item>
+    <!--<button ion-button type="submit" [disabled]="!todo.valid">Submit</button>-->
+    <button ion-button type="submit" block style="width: 200px; margin: 40px auto; font-size: 18px; padding: 25px 0;">Submit</button>
+  </form>
+
+  <!---------------  NOT WORKING --------------->
+
+
+
+
+
+
+</ion-content>
+
+
+
+<!--name: 'itemName',-->
+<!--{-->
+<!--name: 'itemDesc',-->
+<!--{-->
+<!--name: 'itemImg',-->
+<!--},-->
+<!--{-->
+<!--name: 'avatarImg',-->

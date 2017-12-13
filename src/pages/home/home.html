@@ -1,14 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar >
+        <ion-title>
+            Item List
+        </ion-title>
+
+        <!--subtitle-->
+        <p style="font-size: 18px; padding-left: 15px;">Add Item</p>
+
+        <!--add listing button-->
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addListing()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+
+    </ion-navbar> <!--end nav-->
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card *ngFor="let item of items | async">
+        <ion-item>
+            <ion-avatar item-start><img src="{{item.avatarImg}}"></ion-avatar>
+
+            <button clear color="secondary" ion-button icon-only float-right (click)="deleteListing(item.id)">
+                <ion-icon color="blue" name="trash"></ion-icon>
+            </button>
+
+            <button clear color="secondary" ion-button icon-only float-right (click)="updateListingDesc(item)">
+                <ion-icon name="create" style="padding-right: 20px;"></ion-icon>
+            </button>
+
+            <h2 style="font-size: 16px;">Item Name: {{ item.itemName }}</h2>
+            <p displayFormat='MM/YYYY'>Sale Date: {{ item.date}}</p>
+        </ion-item>
+        <img src="{{item.itemImg}}">
+        <ion-card-content style="padding-top:40px; padding-bottom: 40px; font-size: 16px;"> {{item.itemDesc}}</ion-card-content>
+
+    </ion-card>
 </ion-content>
